@@ -4,7 +4,15 @@ const app = express();
 const port = 5114;
 
 app.get('/', (req, res) => {
-    console.log('GET: home page');
+    return res.send('home page');
+    
+});
+app.get('/login', (req, res) => {
+    return res.send('login page');
+    
+});
+app.get('*', (req, res) => {
+    return res.send('404 page not found');
     
 });
 
